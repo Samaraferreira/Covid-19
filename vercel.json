@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "covid-backend",
+  "public": true,
+  "alias": "covid-backend",
+  "name": "covid-backend",
+  "builds": [
+    { "src": "src/server.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "src/server.js" }
+  ]
+}
