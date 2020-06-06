@@ -13,7 +13,11 @@ routes.post("/register-user", UserController.create);
 
 routes.get("/cases", CaseController.index);
 routes.post("/register-case", CaseController.create);
-routes.put("/update/status/:id", CaseController.setStatus);
 routes.get("/search/status", CaseController.findByStatus);
+routes.put("/update/status/:id", CaseController.setStatus);
+routes.put("/update/hospitalized/:id", CaseController.setHospitalized);
+
+routes.get("/hospitalized", CaseController.getHospitalized);
+routes.get("/tested", CaseController.getTested);
 
 module.exports = routes;
